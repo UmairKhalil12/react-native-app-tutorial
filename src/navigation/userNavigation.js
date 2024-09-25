@@ -1,12 +1,13 @@
+import NavigationStrings from "../constants/NavigationStrings";
 import Home from "../screens/userScreens/Home/Home"
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 export default function userNavigation() {
     const Stack = createNativeStackNavigator();
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Home" component={Home} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator screenOptions={{headerShown : false}} >
+            <Stack.Screen name={NavigationStrings.HOME} component={Home} />
+        </Stack.Navigator>
     )
 }
