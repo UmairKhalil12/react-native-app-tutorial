@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import authNavigation from './authNavigation';
-import userNavigation from './userNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import UserNavigation from './UserNavigation';
+import AuthNavigation from './AuthNavigation';
+import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
+import { SafeAreaView } from 'react-native';
 
 export default function Routes() {
     const [email, setEmail] = useState(null);
@@ -13,7 +15,7 @@ export default function Routes() {
         console.log(data, 'data key: email');
         if (data !== null) {
             setEmail(data);
-        } else {
+        } else if (data === null) {
             setEmail(false);
         }
         setLoading(false);
@@ -21,7 +23,7 @@ export default function Routes() {
 
     useEffect(() => {
         getData();
-    });
+    }, []);
 
     if (loading) {
         return null;
@@ -29,7 +31,9 @@ export default function Routes() {
 
     return (
         <NavigationContainer>
-            {email ? userNavigation() : authNavigation()}
+            {email ?
+                <NavigationTopBar />
+                : <AuthNavigation />}
         </NavigationContainer>
     );
 }

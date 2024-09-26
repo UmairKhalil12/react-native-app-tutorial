@@ -22,10 +22,9 @@ const Login = ({ navigation }) => {
       Alert.alert(`Login Sucessfull ${email}`);
       console.log('email checking', email);
       await AsyncStorage.setItem('email', email);
-      navigation.reset({
-        index: 0,   // Reset the stack
-        routes: [{ name: NavigationStrings.HOME }]  // Navigate to HOME
-      });
+      const value = await AsyncStorage.getItem('email');
+      console.log('email login console', value);
+      // console.log('email', AsyncStorage.getItem('email'));
     }
     else {
       Alert.alert('Error', 'email and password are required');

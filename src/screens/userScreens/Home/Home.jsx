@@ -1,23 +1,27 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import NavigationStrings from '../../../constants/NavigationStrings'
+// import NavigationStrings from '../../../constants/NavigationStrings'
+import NavigationTopBar from '../../../components/NavigationTopBar/NavigationTopBar'
+// import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Home = ({ navigation }) => {
     const handleSignout = async () => {
         await AsyncStorage.removeItem('email');
-        navigation.reset({
-            index: 0, 
-            routes: [{ name: NavigationStrings.LOGIN }]
-          });
+        const data = await AsyncStorage.getItem('email')
+        console.log(data, 'email signout console')
+        // navigation.navigate('login'); 
     }
     return (
+        <>
+        {/* <NavigationTopBar /> */}
         <View style={styles.homeView}>
-            <Text>Home</Text>
+            <Text style = {{color : 'black'}} >Home</Text>
             <TouchableOpacity style={styles.homeBtn} onPress={handleSignout} >
                 <Text style={styles.homeBtnText} > Signout</Text>
             </TouchableOpacity>
         </View>
+        </>
     )
 }
 
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         color: 'black',
-        backgroundColor: 'blue'
+        backgroundColor: 'whitesmoke',
     },
     homeBtn: {
         width: 100,

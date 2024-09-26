@@ -10,7 +10,7 @@ import ChooseYourAccount from "../screens/authScreens/ChooseYourAccount/ChooseYo
 import navigationStrings from "../constants/NavigationStrings";
 
 
-export default function authNavigation() {
+export default function AuthNavigation() {
     const Stack = createNativeStackNavigator();
     return (
         <Stack.Navigator screenOptions={{headerShown : false}}>
