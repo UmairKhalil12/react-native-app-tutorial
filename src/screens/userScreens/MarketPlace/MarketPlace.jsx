@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
 
-const MarketPlace = () => {
+const MarketPlace = ({ navigation }) => {
     return (
-        <View style={styles.MarketView}>
-            <Text style={styles.MarketText} >Market Place</Text>
-        </View>
+        <>
+            <ScreenTopBar title='Market Place' />
+            <View style={styles.MarketView}>
+                <Text style={styles.MarketText} >Market Place</Text>
+            </View>
+        </>
     )
 }
 

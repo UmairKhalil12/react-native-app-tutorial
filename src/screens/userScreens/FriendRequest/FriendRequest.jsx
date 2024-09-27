@@ -1,26 +1,30 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
 
-const FriendRequest = () => {
+const FriendRequest = ({ navigation }) => {
   return (
-    <View style = {styles.friendsView} >
-      <Text style = {styles.textFriends} >FriendRequest</Text>
-    </View>
+    <>
+    <ScreenTopBar title='Friend Requests' />
+      <View style={styles.friendsView} >
+        <Text style={styles.textFriends} >Friend Request</Text>
+      </View>
+    </>
   )
 }
 
 export default FriendRequest
 
 const styles = StyleSheet.create({
-  friendsView : {
+  friendsView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  textFriends : {
+  textFriends: {
     fontSize: 20,
     color: 'black',
-    fontWeight : '400'
+    fontWeight: '400'
   }
 
 })
