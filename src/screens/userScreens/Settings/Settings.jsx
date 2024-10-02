@@ -1,8 +1,10 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from "./styles"
+import FacebookButton from '../../../components/FacebookButton/FacebookButton';
+import SettingsTab from '../../../components/SettingsTab/SettingsTab';
 
 const Settings = ({ navigation }) => {
 
@@ -29,17 +31,17 @@ const Settings = ({ navigation }) => {
     const friends = [
         {
             id: 1,
-            Name: 'Friend 1',
+            Name: 'Friend name',
             Img: require('../../../assets/images/friend1.jpg')
         },
         {
             id: 2,
-            Name: 'Friend 2',
+            Name: 'Friend name',
             Img: require('../../../assets/images/friend2.jpg')
         }
     ]
 
-    const settings = [
+    const tabs = [
         {
             id: 1,
             Name: 'Friends',
@@ -74,17 +76,36 @@ const Settings = ({ navigation }) => {
         }
     ]
 
+    const settings = [
+        {
+            id: 1,
+            title: 'Help & support',
+            icon: 'help-circle'
+        },
+        {
+            id: 2,
+            title: 'Settings & privacy',
+            icon: 'settings'
+        },
+        {
+            id: 3,
+            title: 'Professional access',
+            icon: 'grid'
+        }
+    ]
+
     return (
-        <ScrollView contentContainerStyle={{ paddingBottom: 100 }} >
+        <ScrollView contentContainerStyle={{ paddingBottom: 30 }} >
             <ScreenTopBar title='Settings' />
             <View style={styles.settingView}  >
+
                 {/* profile view */}
                 <View style={styles.profileView} >
-                    <View style={styles.myProfileView} >
+                    <TouchableOpacity style={styles.myProfileView} >
                         <Image source={require('../../../assets/images/profilePhoto.png')} style={styles.profilePhoto} />
                         <Text style={styles.profileViewText}> Umair Khalil </Text>
                         <View style={styles.line} />
-                    </View>
+                    </TouchableOpacity>
                     <View style={styles.addNewProfile} >
                         <Icon style={{ paddingLeft: 5 }} name='add-circle' size={40} color='grey' />
                         <Text style={styles.addNewProfileText} >Create new profile or page</Text>
@@ -108,7 +129,7 @@ const Settings = ({ navigation }) => {
                             return (
                                 <View style={styles.shortcutOneView} key={friend?.id}>
                                     <Image style={styles.shortcutFriendImg} source={friend?.Img} />
-                                    <Text style={styles.shortcutImgText}> {truncateTitle(friend?.Name, 8)} </Text>
+                                    <Text style={styles.shortcutImgText}> {friend?.Name} </Text>
                                 </View>
                             )
                         })}
@@ -116,16 +137,40 @@ const Settings = ({ navigation }) => {
                 </View>
 
                 {/* Settings Tab */}
-                <View  style = {{width : '100%' , alignItems : 'center' , flex : 1}}>
-                    {settings?.map((setting) => {
+                <View style={{ width: '100%', alignItems: 'center', flex: 1 }}>
+                    {tabs?.map((tab) => {
                         return (
-                            <View style={styles.settingsTab} key={setting?.id} >
-                                <Icon name={setting.imgName} size={30} color='dodgerblue' />
-                                <Text style={styles.settingsTabText} >{setting?.Name}</Text>
-                            </View>
+                            <SettingsTab Name={tab?.Name} imgName={tab?.imgName} key={tab?.id} />
                         );
                     })}
                 </View>
+
+                {/* Button */}
+                <FacebookButton text='see more' />
+
+                {/*Settings Menu */}
+                <View style={{ width: '100%', alignItems: 'center', flex: 1 , marginTop: 20,}} >
+                    {settings.map((setting, index) => {
+                        return (
+                            <TouchableOpacity
+                                style={
+                                    [styles.settingsMainDiv,
+                                    index === settings.length - 1 && styles.settingsMainDivLast
+                                    ]
+                                }
+                                key={setting.id} >
+                                <View style={styles.settingSubDiv}>
+                                    <Icon name={setting?.icon} size={30} color='grey' />
+                                    <Text style={styles.settingText}  >{setting.title}</Text>
+                                </View>
+                                <Icon name='chevron-down-outline' size={20} color='grey' />
+                            </TouchableOpacity>
+                        )
+                    })}
+                </View>
+
+                {/* Logout btn */}
+                <FacebookButton text='Logout' />
 
             </View>
         </ScrollView>

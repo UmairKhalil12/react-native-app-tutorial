@@ -5,11 +5,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center'
     },
-    settingText: {
-        fontSize: 20,
-        fontWeight: '400',
-        color: 'black'
-    },
     profileView: {
         padding: 10,
         width: '95%',
@@ -46,6 +41,7 @@ const styles = StyleSheet.create({
     addNewProfileText: {
         fontWeight: '500',
         fontSize: 15,
+        color: 'grey'
     },
 
     profileViewText: {
@@ -66,7 +62,6 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         width: '100%',
         padding: 10,
-
     },
     shortcutText: {
         color: 'black',
@@ -77,53 +72,60 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         textAlign: 'center',
-        justifyContent: 'space-between',
-        overflow: 'scroll'
+        justifyContent: 'flex-start',
+        overflow: 'scroll',
+        gap: 10
     },
+    shortcutOneView: {
+        width: '15%',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
     shortcutImg: {
-        width: 60,
+        width: '100%',
         height: 60,
         borderRadius: 10
     },
 
     shortcutFriendImg: {
-        width: 60,
+        width: '100%',
         height: 60,
         borderRadius: 100
     },
-    shortcutOneView: {
-        width: '25%'
-    },
+
     shortcutImgText: {
-        margin: '0 auto',
-        width: '50%',
-        textAlign: 'center',
+        // margin: '0 auto',
+        width: '100%',
+        textAlign: 'left',
         flexWrap: 'wrap',
-        fontSize: 12
+        fontSize: 12,
+        color: 'grey'
     },
-    settingsTab: {
-        padding: 10,
-        width: '95%',
-        marginTop: '2%',
-        height: 70,
-        shadowColor: '#000',
+    settingsMainDiv: {
         flexDirection: 'row',
-        gap: 10,
         alignItems: 'center',
-        backgroundColor: '#F8F8FF',
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 6,
-        elevation: 5,
-        borderRadius: 10,
+        justifyContent: 'space-between',
+        width: '95%',
+        borderTopWidth: 0.5,
+        borderColor: 'grey',
+        padding : 15
     },
-    settingsTabText: {
+    settingSubDiv: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10
+    },
+    settingText: {
         color: 'black',
-        fontSize: 15,
-        fontWeight: '500'
+        fontWeight: '600',
+        fontSize: 14,
+        textTransform : 'capitalize'
+    },
+    settingsMainDivLast: {
+        borderBottomWidth: 0.5,
+        borderColor: 'grey'
     }
 })
 
