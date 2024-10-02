@@ -1,7 +1,7 @@
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
-import styles from './FriendRequest'
+import styles from './styles'
 import ConfirmButton from '../../../components/ConfirmButton/ConfirmButton'
 import DeleteButton from '../../../components/DeleteButton/DeleteButton'
 import FriendRequestBubbles from '../../../components/FriendRequestBubbles/FriendRequestBubbles'

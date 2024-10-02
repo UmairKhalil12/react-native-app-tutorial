@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import PostingBar from '../../../components/PostingBar/PostingBar'
 // import HomeTopBar from '../../../components/HomeTopBar/HomeTopBar'
 
 const Home = ({ navigation }) => {
@@ -11,10 +12,7 @@ const Home = ({ navigation }) => {
     }
     return (
         <View style={styles.homeView}>
-            <Text style={{ color: 'black' }} >Home</Text>
-            <TouchableOpacity style={styles.homeBtn} onPress={handleSignout} >
-                <Text style={styles.homeBtnText} > Signout</Text>
-            </TouchableOpacity>
+            <PostingBar />
         </View>
     )
 }
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
     homeView: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         color: 'black',
         backgroundColor: 'whitesmoke',
     },
