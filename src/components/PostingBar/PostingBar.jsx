@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const PostingBar = () => {
     return (
         <View style={styles.PostingBarView}>
-            <Image source={require('../../assets/images/profilePhoto.png')} style={styles.postingBarDp} />
+            <Image source={require('../../assets/images/profilePhoto.jpg')} style={styles.postingBarDp} />
             <TextInput placeholder="What's on your mind?" style={styles.barInput} placeholderTextColor={'grey'} />
             <Icon name='image' size={30} color='green' />
         </View>
@@ -35,11 +35,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'grey',
         paddingLeft: 20,
-        height: 40,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'grey'
+        height : 40,
+        color: 'grey',
+        alignItems : 'center',
+        justifyContent : 'center',
     },
     postingBarDp: {
         height: 50,

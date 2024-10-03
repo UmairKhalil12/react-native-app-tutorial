@@ -1,8 +1,9 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import PostingBar from '../../../components/PostingBar/PostingBar'
-// import HomeTopBar from '../../../components/HomeTopBar/HomeTopBar'
+import StoriesBar from '../../../components/StoriesBar/StoriesBar'
+import PostComponent from '../../../components/PostComponent/PostComponent'
 
 const Home = ({ navigation }) => {
     const handleSignout = async () => {
@@ -10,21 +11,31 @@ const Home = ({ navigation }) => {
         const data = await AsyncStorage.getItem('email')
         console.log(data, 'email signout console')
     }
+
     return (
-        <View style={styles.homeView}>
+        <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollViewContent}>
             <PostingBar />
-        </View>
+            <StoriesBar />
+            <PostComponent />
+        </ScrollView>
     )
 }
 
 export default Home
 
 const styles = StyleSheet.create({
+    scrollView: {
+        flex: 1, 
+        backgroundColor: 'whitesmoke',
+        width : '100%'
+    },
+    scrollViewContent: {
+        alignItems: 'center', // Center the content horizontally
+        paddingVertical: 20,  // Add vertical padding if needed
+    },
     homeView: {
         flex: 1,
         alignItems: 'center',
-        // justifyContent: 'center',
-        color: 'black',
         backgroundColor: 'whitesmoke',
     },
     homeBtn: {

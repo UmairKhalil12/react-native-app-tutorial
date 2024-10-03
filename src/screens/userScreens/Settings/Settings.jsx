@@ -102,7 +102,7 @@ const Settings = ({ navigation }) => {
                 {/* profile view */}
                 <View style={styles.profileView} >
                     <TouchableOpacity style={styles.myProfileView} >
-                        <Image source={require('../../../assets/images/profilePhoto.png')} style={styles.profilePhoto} />
+                        <Image source={require('../../../assets/images/profilePhoto.jpg')} style={styles.profilePhoto} />
                         <Text style={styles.profileViewText}> Umair Khalil </Text>
                         <View style={styles.line} />
                     </TouchableOpacity>
@@ -149,7 +149,7 @@ const Settings = ({ navigation }) => {
                 <FacebookButton text='see more' />
 
                 {/*Settings Menu */}
-                <View style={{ width: '100%', alignItems: 'center', flex: 1 , marginTop: 20,}} >
+                <View style={{ width: '100%', alignItems: 'center', flex: 1, marginTop: 20, }} >
                     {settings.map((setting, index) => {
                         return (
                             <TouchableOpacity
