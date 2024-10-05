@@ -3,7 +3,7 @@ import React from 'react';
 import ads from './ads';
 
 const AdsComponent = () => {
-    
+
     const truncateTitle = (word, length) => {
         if (word.length > length) {
             return word.substring(0, length) + '...';
