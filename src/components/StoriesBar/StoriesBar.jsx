@@ -1,6 +1,7 @@
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
 
 const StoriesBar = () => {
     const stories = [
@@ -66,9 +67,9 @@ export default StoriesBar
 
 const styles = StyleSheet.create({
     container: {
-        height: 250,
-        marginTop: 10,
-        marginBottom: 10,
+        height: verticalScale(220),
+        marginTop: scale(10),
+        marginBottom: scale (10),
         backgroundColor: 'white',
         // shadowColor: '#000',
         // shadowOffset: { width: 0, height: 5 }, 
@@ -79,15 +80,15 @@ const styles = StyleSheet.create({
     storiesBarView: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingHorizontal: 10,
+        paddingHorizontal: scale(8),
     },
     storyView: {
         position: 'relative',
-        marginRight: 10,
+        marginRight: scale(10),
     },
     accountText: {
         color: 'white',
-        fontSize: 12,
+        fontSize: scale(12),
         fontWeight: 'bold',
         position: 'absolute',
         top: '70%',
@@ -95,49 +96,49 @@ const styles = StyleSheet.create({
         width: '90%',
     },
     storyImg: {
-        height: 220,
-        width: 120,
+        height: verticalScale(200),
+        width: scale(120),
         opacity: 0.8,
-        borderRadius: 10,
-        borderWidth: 1,
+        borderRadius: scale(10),
+        borderWidth: scale(1),
         borderColor: 'grey',
-        borderRadius : 10
+        borderRadius : scale(10)
     },
     accountImg: {
-        height: 40,
-        width: 40,
-        borderRadius: 100,
+        height: moderateScale(40),
+        width: scale(40),
+        borderRadius: scale(100),
         borderColor: '#1877F2',
-        borderWidth: 2,
+        borderWidth: scale(2),
         position: 'absolute',
-        left: 5,
-        top: 5,
+        left: scale(5),
+        top: scale(5),
     },
     addStoryDp: {
-        height: 220,
-        width: 120,
-        borderRadius: 10,
+        height: verticalScale(200),
+        width:scale(120),
+        borderRadius: scale(10),
         position: 'relative',
         opacity: 0.8,
-        borderWidth: 1,
+        borderWidth: scale(1),
         borderColor: 'grey',
         borderRadius : 10
     },
     addIconText: {
         position: 'absolute',
-        top: 100,
-        left: 10
+        top: scale(100),
+        left: scale(10)
     },
     addStoryIcon: {
-        right: 10,
+        right:scale(10),
         textAlign: 'center',
         color: '#1877F2',
-        fontSize: 40
+        fontSize: scale(40)
     },
     addStoryText: {
-        marginTop: 5,
+        marginTop: scale(5),
         color: 'black',
-        fontSize: 12,
+        fontSize: scale(12),
         fontWeight: '900',
         textAlign: 'center',
         width: '80%'

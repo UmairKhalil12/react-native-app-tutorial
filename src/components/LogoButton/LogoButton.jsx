@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale } from 'react-native-size-matters';
 
 const LogoButton = ({ text, logoName, style }) => {
     return (
@@ -18,13 +19,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 5,
+        gap: scale(5),
         backgroundColor : '#DCDCDC',
-        borderRadius : 100,
-        padding : 3
+        borderRadius : scale(100),
+        padding : scale(3)
     },
     logoBtnText: {
-        fontSize: 16,
+        fontSize: scale(16),
         color: 'black',
         alignItems : 'center',
         justifyContent : 'center',
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
         fontWeight : '600'
     },
     logoBtnLogo: {
-        fontSize: 24,
+        fontSize: scale(24),
         color: 'black',
         fontWeight : '600'
     }

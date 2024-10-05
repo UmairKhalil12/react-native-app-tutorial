@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import { scale, verticalScale } from "react-native-size-matters"
 
 const styles = StyleSheet.create({
     settingView: {
@@ -6,75 +7,75 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     profileView: {
-        padding: 10,
+        padding: scale(8),
         width: '95%',
         marginTop: '15%',
         shadowColor: '#000',
         backgroundColor: '#F8F8FF',
         shadowOffset: {
-            width: 0,
-            height: 4,
+            width: scale(0),
+            height: scale(4),
         },
-        shadowOpacity: 0.2,
-        shadowRadius: 6,
-        elevation: 5,
-        borderRadius: 20,
+        shadowOpacity: scale(0.2),
+        shadowRadius: scale(6),
+        elevation: scale(5),
+        borderRadius: scale(20),
     },
     myProfileView: {
         flexDirection: 'row',
-        gap: 10,
+        gap: scale(8),
         alignItems: 'center',
         width: '100%',
-        padding: 10,
+        padding: scale(8),
 
     },
     addNewProfile: {
         flexDirection: 'row',
-        gap: 10,
+        gap: scale(8),
         alignItems: 'center',
         width: '100%',
-        padding: 10,
-        borderTopWidth: 1,
+        padding: scale(8),
+        borderTopWidth: scale(1),
         borderColor: 'lightgrey'
     },
 
     addNewProfileText: {
         fontWeight: '500',
-        fontSize: 15,
+        fontSize: scale(14),
         color: 'grey'
     },
 
     profileViewText: {
         color: 'black',
         fontWeight: '500',
-        fontSize: 20
+        fontSize: scale(18)
     },
     profilePhoto: {
-        height: 50,
-        width: 50,
-        borderRadius: 100,
-        borderWidth: 1,
+        height: verticalScale(50),
+        width: scale(50),
+        borderRadius: scale(100),
+        borderWidth: scale(1),
         borderColor: 'white'
     },
     shortcutView: {
-        marginTop: 20,
+        marginTop: verticalScale(20),
         flexDirection: 'column',
         textAlign: 'left',
         width: '100%',
-        padding: 10,
+        padding: scale(10),
     },
     shortcutText: {
         color: 'black',
         fontWeight: 'bold',
     },
     shortcutImageView: {
-        marginTop: 10,
+        marginTop: scale(8),
         flexDirection: 'row',
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'flex-start',
         overflow: 'scroll',
-        gap: 10
+        gap: scale(8)
     },
     shortcutOneView: {
         width: '15%',
@@ -85,14 +86,14 @@ const styles = StyleSheet.create({
 
     shortcutImg: {
         width: '100%',
-        height: 60,
-        borderRadius: 10
+        height: verticalScale(50),
+        borderRadius: scale(10)
     },
 
     shortcutFriendImg: {
         width: '100%',
-        height: 60,
-        borderRadius: 100
+        height:verticalScale(50),
+        borderRadius: scale(100)
     },
 
     shortcutImgText: {
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
         width: '100%',
         textAlign: 'left',
         flexWrap: 'wrap',
-        fontSize: 12,
+        fontSize: scale(11),
         color: 'grey'
     },
     settingsMainDiv: {
@@ -108,23 +109,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '95%',
-        borderTopWidth: 0.5,
+        borderTopWidth: scale(0.5),
         borderColor: 'grey',
-        padding : 15
+        padding : scale(12)
     },
     settingSubDiv: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 10
+        gap: scale(8)
     },
     settingText: {
         color: 'black',
         fontWeight: '600',
-        fontSize: 14,
+        fontSize: scale(14),
         textTransform : 'capitalize'
     },
     settingsMainDivLast: {
-        borderBottomWidth: 0.5,
+        borderBottomWidth: scale(0.5),
         borderColor: 'grey'
     }
 })

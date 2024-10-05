@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale } from 'react-native-size-matters';
+
 
 const FriendRequestBubbles = () => {
     return (
@@ -25,18 +27,18 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '95%',
-        margin: 10,
+        margin: scale(10),
     },
     friendReqBubble: {
-        padding: 10,
+        padding: scale(10),
         backgroundColor: '#DCDCDC',
         color: 'black',
-        borderRadius: 50,
+        borderRadius: scale(50),
         flexDirection: 'row',
         alignItems: 'center',
     },
     onlineDot: {
-        fontSize: 10,
+        fontSize: scale(10),
         color : 'green'
     }
 })

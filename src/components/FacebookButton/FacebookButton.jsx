@@ -1,5 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { scale, verticalScale } from 'react-native-size-matters'
+
 
 const FacebookButton = ({text , style, onPress}) => {
   return (
@@ -17,13 +19,13 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         backgroundColor : '#DCDCDC',
         width : '95%',
-        height : 40,
-        marginTop : 20,
-        borderRadius : 10,
+        height : verticalScale(30),
+        marginTop : scale(8),
+        borderRadius : scale(10),
     },
     buttonText  :{
         color : 'black',
-        fontSize : 14,
+        fontSize : scale(14),
         textAlign : 'center',
         textTransform : 'capitalize',
         fontWeight : '600'

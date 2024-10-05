@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale } from 'react-native-size-matters';
 
 const ScreenTopBar = ({ title }) => {
     return (
@@ -22,11 +23,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 10
+        padding: scale(10)
     },
     screenTopBarText: {
         color: 'black',
-        fontSize: 20,
+        fontSize: scale(20),
         fontWeight: 'bold'
     },
     screenTopBarIcons: {

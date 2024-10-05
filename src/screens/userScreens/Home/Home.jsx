@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import PostingBar from '../../../components/PostingBar/PostingBar'
 import StoriesBar from '../../../components/StoriesBar/StoriesBar'
 import PostComponent from '../../../components/PostComponent/PostComponent'
+import { scale, verticalScale } from 'react-native-size-matters'
 
 const Home = ({ navigation }) => {
     const handleSignout = async () => {
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
         width : '100%'
     },
     scrollViewContent: {
-        alignItems: 'center', // Center the content horizontally
-        paddingVertical: 20,  // Add vertical padding if needed
+        alignItems: 'center', 
+        paddingVertical: verticalScale(20),  
     },
     homeView: {
         flex: 1,
@@ -39,13 +40,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'whitesmoke',
     },
     homeBtn: {
-        width: 100,
-        height: 50,
+        width: scale(100),
+        height:verticalScale(50),
         color: 'white',
         backgroundColor: 'red',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20
+        marginTop: verticalScale(20)
     },
     homeBtnText: {
         color: 'white',

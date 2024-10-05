@@ -1,41 +1,42 @@
 import { StyleSheet } from 'react-native'
+import { scale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
     postView: {
         backgroundColor: 'white',
-        marginTop: 5
+        marginTop: scale(5)
     },
     accountInfo: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        gap: 1,
-        paddingTop: 10,
-        paddingRight: 10,
-        paddingLeft: 10
+        gap: scale(1),
+        paddingTop: scale(10),
+        paddingRight: scale(10),
+        paddingLeft: scale(10)
     },
     accountDp: {
-        width: 60,
-        height: 60,
-        borderRadius: 100
+        width: scale(60),
+        height: scale(60),
+        borderRadius: scale(100)
     },
     accountText: {
         color: 'black',
-        fontSize: 16,
+        fontSize:scale(16),
         fontWeight: '600'
     },
     timeText: {
         color: 'gray',
-        fontSize: 10
+        fontSize: scale(10)
     },
     postText: {
-        fontSize: 14,
+        fontSize: scale(14),
         color: 'black',
-        padding: 10
+        padding: scale(10)
     },
     postImg: {
         width: '100%',
-        height: 400
+        height: scale(400)
     },
 
     likeCommentShareView: {
@@ -43,11 +44,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 10,
+        padding: scale(10),
     },
     reactionsBtn: {
         width: '25%',
-        gap: 2,
+        gap: scale(2),
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent : 'center'
@@ -57,12 +58,12 @@ const styles = StyleSheet.create({
         color: 'grey',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: 12
+        fontSize: scale(12)
     },
 
     reactionsBtnLogo: {
         color: 'grey',
-        fontSize: 25
+        fontSize: scale(25)
     },
     likeCommentCountView : {
         flexDirection:'row',
@@ -70,17 +71,17 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     postLikeShareText : {
-        paddingLeft: 10,
-        fontSize: 12,
+        paddingLeft: scale(10),
+        fontSize: scale(12),
         color: 'grey',
-        paddingTop : 10
+        paddingTop : scale(10)
     },
     postCommentShare : {
         flexDirection : 'row',
         justifyContent : 'center',
         alignItems : 'center',
-        paddingLeft: 10,
-        paddingRight : 5
+        paddingLeft: scale(10),
+        paddingRight : scale(5)
     }
 })
 

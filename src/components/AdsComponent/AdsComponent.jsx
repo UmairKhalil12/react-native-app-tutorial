@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 import React from 'react';
 import ads from './ads';
+import { scale, verticalScale } from 'react-native-size-matters';
 
 const AdsComponent = () => {
 
@@ -32,20 +33,20 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 10,
+        padding: scale(8),
         flexWrap: 'wrap',
         width: '100%',
     },
     singleAdView: {
         width: '50%',
-        marginBottom: 10,
+        marginBottom: scale(10),
     },
     adImg: {
         width: '95%',
-        height: 150,
+        height: verticalScale(150),
     },
     adText: {
-        fontSize: 14,
+        fontSize: scale(12),
         color: 'black',
         textAlign: 'center',
     },

@@ -1,7 +1,8 @@
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
+// import { scale } from 'react-native-size-matters';
 import React from 'react';
 import Icon from "react-native-vector-icons/MaterialIcons"
+import { scale } from 'react-native-size-matters';
 
 const InputForm = ({ value, placeholder, onChangeText, inputStyle, OnPress, iconSource, ...props }) => {
     return (
@@ -27,11 +28,11 @@ export default InputForm;
 const styles = StyleSheet.create({
     loginInput: {
         backgroundColor: '#F8F0F0',
-        marginTop: moderateScale(20),
-        height: moderateScale(50),
+        marginTop: scale(20),
+        height: scale(50),
         width: '80%',
-        borderRadius: moderateScale(10),
-        padding: moderateScale(15),
+        borderRadius: scale(10),
+        padding: scale(15),
         color: 'black',
     },
     inputView: {
@@ -41,8 +42,8 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     inputIcon: {
-        height: moderateScale(24),
-        width: moderateScale(24),
+        height: scale(24),
+        width: scale(24),
         color: '#8F8989'
     },
     touchableIcon: {

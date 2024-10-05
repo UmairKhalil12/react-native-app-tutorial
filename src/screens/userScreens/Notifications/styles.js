@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scale, verticalScale } from 'react-native-size-matters'
 
 const styles = StyleSheet.create({
     notificationView: {
@@ -9,26 +10,26 @@ const styles = StyleSheet.create({
     },
     textNotifications: {
         color: 'black',
-        fontSize: 20,
+        fontSize: scale(18),
         fontWeight: '400'
     },
     notificationHeadingText: {
-        fontSize: 16,
+        fontSize: scale(14),
         color: 'black',
         fontWeight: 'bold',
         textAlign: 'left',
-        marginLeft : 15,
-        marginTop : 20
+        marginLeft : scale(12),
+        marginTop : verticalScale(8)
     },
     notificationDiv: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingRight: 10,
-        paddingLeft: 10,
-        paddingTop: 15,
-        paddingBottom: 15,
-        paddingTop: 10,
+        paddingRight: scale(8),
+        paddingLeft: scale(8),
+        paddingTop: verticalScale(8),
+        paddingBottom: verticalScale(8),
+        paddingTop: verticalScale(8),
         width: '100%',
         backgroundColor: 'transparent'
     },
@@ -36,26 +37,26 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingRight: 10,
-        paddingLeft: 10,
-        paddingTop: 20,
-        paddingBottom: 20,
-        paddingTop: 10,
+        paddingRight: scale(8),
+        paddingLeft: scale(8),
+        paddingTop: verticalScale(8),
+        paddingBottom: verticalScale(8),
+        paddingTop: verticalScale(8),
         width: '100%',
         backgroundColor: '#E7F3FF'
     },
     notificationDp: {
-        width: 70,
-        height: 70,
-        borderRadius: 100,
-        borderWidth: 1,
+        width: scale(70),
+        height: verticalScale(70),
+        borderRadius: scale(100),
+        borderWidth: scale(1),
         borderColor: 'white'
     },
 
     notificationSubDiv: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 10
+        gap: scale(6)
     },
 
     notificationTextDiv: {
@@ -65,12 +66,12 @@ const styles = StyleSheet.create({
     },
     notificationText: {
         color: 'black',
-        fontSize: 14,
+        fontSize: scale(13),
         fontWeight : '500'
     },
     notificationTimeText: {
         color: 'grey',
-        fontSize: 12
+        fontSize: scale(11)
     }
 })
 

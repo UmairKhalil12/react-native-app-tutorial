@@ -1,5 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { scale } from 'react-native-size-matters'
+
 
 const ConfirmButton = ({ style }) => {
     return (
@@ -13,15 +15,15 @@ export default ConfirmButton
 
 const styles = StyleSheet.create({
     confirmBtn: {
-        padding: 6,
+        padding: scale(6) ,
         backgroundColor: '#1877F2',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 5
+        borderRadius: scale(5)
     },
     confirmBtnText: {
         fontWeight: '600',
-        fontSize: 14,
+        fontSize: scale(14),
         color: 'white'
     },
 

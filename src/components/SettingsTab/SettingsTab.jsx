@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale } from 'react-native-size-matters';
 
 const SettingsTab = ({ imgName, Name }) => {
     return (
@@ -15,27 +16,27 @@ export default SettingsTab
 
 const styles = StyleSheet.create({
     settingsTab: {
-        padding: 10,
+        padding: scale(10),
         width: '95%',
         marginTop: '2%',
-        height: 70,
+        height: scale(60),
         shadowColor: '#000',
         flexDirection: 'row',
-        gap: 10,
+        gap: scale(10),
         alignItems: 'center',
         backgroundColor: '#F8F8FF',
         shadowOffset: {
-            width: 0,
-            height: 4,
+            width: scale(0),
+            height: scale(4),
         },
-        shadowOpacity: 0.2,
-        shadowRadius: 6,
-        elevation: 5,
-        borderRadius: 10,
+        shadowOpacity: scale(0.2),
+        shadowRadius: scale(6),
+        elevation: scale(5),
+        borderRadius: scale(10),
     },
     settingsTabText: {
         color: 'black',
-        fontSize: 15,
+        fontSize: scale(15),
         fontWeight: '500'
     }
 })

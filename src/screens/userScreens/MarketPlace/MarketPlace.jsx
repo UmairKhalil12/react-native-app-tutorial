@@ -3,6 +3,7 @@ import React from 'react'
 import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
 import LogoButton from '../../../components/LogoButton/LogoButton'
 import AdsComponent from '../../../components/AdsComponent/AdsComponent'
+import { scale } from 'react-native-size-matters'
 
 const MarketPlace = ({ navigation }) => {
     return (
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     btnView: {
-        padding: 10,
+        padding: scale(10),
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'

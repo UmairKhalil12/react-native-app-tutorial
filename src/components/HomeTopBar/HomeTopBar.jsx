@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale } from 'react-native-size-matters';
 
 
 const HomeTopBar = () => {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        padding: 10,
+        padding: scale(10),
         backgroundColor: 'white'
     },
     iconView: {
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     facebookText: {
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 25,
+        fontSize: scale(25),
         // textTransform : 'capitalize'
     }
 })

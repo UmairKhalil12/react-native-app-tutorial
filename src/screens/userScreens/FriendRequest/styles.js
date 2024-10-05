@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native";
+import { scale, verticalScale } from "react-native-size-matters";
+
 
 const styles = StyleSheet.create({
     friendsView: {
@@ -7,34 +9,33 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     textFriends: {
-      fontSize: 20,
+      fontSize: scale(14),
       color: 'black',
       fontWeight: '400'
     },
     friendReqDiv : {
         width : '100%',
-        padding : 10,
+        padding : scale(8),
         flexDirection : 'row',
         justifyContent : 'flex-start',
-        gap : 15,
+        gap : scale(10),
         alignItems : 'center'
-
     },
     friendReqName : {
         color : 'black',
-        fontSize : 18,
+        fontSize : scale(14),
         fontWeight : '600'
     },
     friendReqMutual : {
         color : 'grey',
-        marginBottom : 5,
-        fontSize : 13
+        marginBottom : verticalScale(5),
+        fontSize : scale(12)
     },
     friendReqDp : {
-        height : 100,
-        width : 100,
-        borderRadius : 100,
-        borderWidth : 1,
+        height : verticalScale(90),
+        width : scale(90),
+        borderRadius : scale(100),
+        borderWidth : scale(1),
         borderColor : 'white'
     },
 
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
         justifyContent : 'space-between',
         alignItems : 'center',
         width : '100%',
-        gap : 10
+        gap : scale(8)
     }
   })
 

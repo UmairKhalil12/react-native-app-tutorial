@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { scale, verticalScale } from 'react-native-size-matters';
 
 const PostingBar = () => {
     return (
@@ -21,30 +22,30 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 15,
+        padding: scale(15),
         backgroundColor: 'white',
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.25,
+        shadowOffset: { width: scale(0), height: scale(3) },
+        shadowOpacity: scale(0.25),
         shadowRadius: 0,
-        elevation: 5,
+        elevation: scale(5),
     },
     barInput: {
         width: '70%',
-        borderRadius: 50,
-        borderWidth: 1,
+        borderRadius: scale(50),
+        borderWidth: scale(1),
         borderColor: 'grey',
-        paddingLeft: 20,
-        height : 40,
+        paddingLeft: scale(20),
+        height : verticalScale(40),
         color: 'grey',
         alignItems : 'center',
         justifyContent : 'center',
     },
     postingBarDp: {
-        height: 50,
-        width: 50,
+        height: verticalScale(50),
+        width: scale(50),
         borderRadius: 100,
-        borderWidth: 1,
+        borderWidth: scale(1),
         borderColor: 'white'
     }
 })
