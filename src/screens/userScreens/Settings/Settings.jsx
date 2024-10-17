@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 import React from 'react'
 import ScreenTopBar from '../../../components/ScreenTopBar/ScreenTopBar'
 import Icon from 'react-native-vector-icons/Ionicons';
-import styles from "./styles"
+import styles from "./styles";
 import FacebookButton from '../../../components/FacebookButton/FacebookButton';
 import SettingsTab from '../../../components/SettingsTab/SettingsTab';
 
